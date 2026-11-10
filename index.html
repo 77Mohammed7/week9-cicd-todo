@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple task manager used to demonstrate CI/CD automation.">
+  <title>TaskFlow | Week 9 CI/CD Demo</title>
+  <link rel="stylesheet" href="./src/styles.css">
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">✓</span><span>TaskFlow</span></div>
+      <span class="topbar-tag">WEEK 09 · CI/CD DEMO</span>
+    </header>
+
+    <main class="main-content">
+      <section class="intro">
+        <div class="eyebrow"><span class="status-dot" aria-hidden="true"></span> AUTOMATION PROJECT</div>
+        <h1>Make room for <span>what matters.</span></h1>
+        <p>A simple, distraction-free place to track your tasks. Built, tested, and deployed with GitHub Actions.</p>
+      </section>
+
+      <section class="task-card" aria-label="Task manager">
+        <div class="card-header">
+          <div>
+            <h2>My Tasks</h2>
+            <p id="summary" aria-live="polite">0 tasks remaining</p>
+          </div>
+          <span class="today-pill">Stay focused ✦</span>
+        </div>
+
+        <form id="task-form" class="task-form">
+          <label class="visually-hidden" for="task-input">Task description</label>
+          <input id="task-input" name="task" type="text" maxlength="120" placeholder="What needs to get done?" autocomplete="off" required>
+          <button type="submit">+ Add Task</button>
+        </form>
+
+        <div class="task-toolbar">
+          <div class="filters" aria-label="Filter tasks">
+            <button type="button" data-filter="all" class="active" aria-pressed="true">All</button>
+            <button type="button" data-filter="active" aria-pressed="false">Active</button>
+            <button type="button" data-filter="completed" aria-pressed="false">Completed</button>
+          </div>
+          <button id="clear-completed" class="clear-button" type="button">Clear completed</button>
+        </div>
+
+        <ul id="task-list" class="task-list" aria-label="Tasks"></ul>
+        <div id="empty-state" class="empty-state">
+          <div class="empty-icon" aria-hidden="true">✦</div>
+          <h3>All clear!</h3>
+          <p>Add a task above to get started.</p>
+        </div>
+      </section>
+      <p class="helper-text">Tasks are saved locally in your browser.</p>
+    </main>
+    <footer>Week 9 · Introduction to Process Automation · GitHub Actions</footer>
+  </div>
+  <script type="module" src="./src/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "week9-cicd-todo",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "A dependency-free To-Do List for a Week 9 CI/CD assignment.",
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test tests/*.test.js"
+  },
+  "engines": {
+    "node": ">=20"
+  }
+}
